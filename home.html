@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-    <style>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <style>
         body {
-            font-family: Arial, sans-serif;
-            overflow: hidden;
+         font-size: 15px;
+         font-family: Arial, sans-serif;
+         overflow: hidden;
         }
-        table {
+
+         .table-container {
             width: 100%;
+            max-width: 1400px; /* Set a fixed maximum width for the table container */
+         }
+
+        table {
+            width: auto;
+            table-layout: auto;
             border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            table-layout: fixed; /* Fixed layout to prevent expansion */
         }
+
         th, td {
             border: 1px solid black;
             text-align: center;
-            padding: 8px;
+            padding: 2px;
+            font-size: 15px; /* Set base font size */
+            word-wrap: break-word; /* Allows content to wrap */
         }
+        
         th {
             background-color: #f2f2f2;
         }
@@ -34,160 +48,43 @@
         .dark-gray {
             background-color: #BFBFBF;
         }
-    </style>
-</head>
-<body>
-    <table>
-        <tr>
-            <th rowspan="2">JAM KE</th>
-            <th colspan="2" rowspan="2">WAKTU</th>
-            <th colspan="12">HARI</th>
-        </tr>
-        <tr>
-            <th>SENIN</th>
-            <TH colspan="2">WAKTU</TH>
-            <th>SELASA</th>
-            <th>RABU</th>
-            <th>KAMIS</th>
-            <TH colspan="2">JAM</TH>
-            <th colspan="1">Jum'at</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td colspan="2" >06.45 - 07.30 </td>
-            <td class="gray">Upacara Bendera</td>
-            <td colspan="2" class="gray">06.45 - 07.30</td>
-            <td colspan="3" class="highlight">Apel dan Angkasa Pagi</td>
-            <td colspan="2" class="gray">06.45 - 07.30</td>
-            <td style="font-size: 5px;" class="dark-gray">Angkasa Cinta LSehat</td>
-        </tr>
+        @media (max-width: 768px) {
+            th, td {
+               padding: 4px;
+               font-size: 12px; /* Smaller font size on mobile */
+            }
+         }
+     </style>
+   </head>
+   <!-- Body -->
+   <body>
+      <div class="table-container">          
+         <table class="table">
+            <tr>
+               <th style="width: 40px;" rowspan="2">JAM KE</th>
+               <th style="width: 100px;" rowspan="2">WAKTU</th>
+               <th colspan="7">HARI</th>
+           </tr>
+           <tr>
+               <th style="width: 80px;">SENIN</th>
+               <TH style="width: 120px;">WAKTU</TH>
+               <th style="width: 90px;">SELASA</th>
+               <th style="width: 90px;">RABU</th>
+               <th style="width: 90px;">KAMIS</th>
+               <TH style="width: 120px;">WAKTU</TH>
+               <th style="width: 120px;">Jum'at</th>
+           </tr>
 
-        <tr style="height: 50px">
-            <td rowspan="1">1</td>
-            <td colspan="2">07.45 - 08.15</td>
-            <td>DPK 2</td>
-            <td colspan="2" class="gray">07.30 - 08.10</td>
-            <td>Seni Bdy</td>
-            <td>B.ING6</td>
-            <td>PENJAS</td>
-            <td colspan="2" class="gray">07.30 - 08.10</td>
-            <td>Informatika</td>
-        </tr>
-        <tr style="height: 50px">
-            <td>2</td>
-            <td colspan="2">08.15 - 08.50</td>
-            <td>Chinetia</td>
-            <td  colspan="2"class="gray">07.30 - 08.10</td>
-            <td>Agus Dd</td>
-            <td>Gina</td>
-            <td>PENJAS</td>
-            <td colspan="2" class="gray">07.30 - 08.10</td>
-            <td>Informatika</td>
-        </tr style="height: 50px">
-        <tr style="height: 50px">
-            <td>3</td>
-            <td colspan="2">08.50 - 09.20</td>
-            <td>DPK 2</td>
-            <td colspan="2">07.30 - 08.10</td>
-            <td>0</td>
-            <td>B.ING6</td>
-            <td>Suhud</td>
-            <td colspan="2" class="gray">07.30 - 08.10</td>
-            <td>FAIZZ</td>
-        </tr>
-        <tr style="height: 50px">
-            <td>4</td>
-            <td colspan="2">09.20 - 10.00</td>
-            <td>Chinetia</td>
-            <td colspan="2">07.30 - 08.10</td>
-            <td>BK SELMA</td>
-            <td>Gina</td>
-            <td>IPAS KIMIA</td>
-            <td colspan="2" class="gray">07.30 - 08.10</td>
-            <td>DPK 1</td>
-        </tr>
-        <tr class="highlight">
+           <tr>
             <td></td>
-            <td colspan="2">10.00 - 10.30</td>
-            <td colspan="6">Istirahat 30 menit</td>
-            <td colspan="2">09.45 - 10.15</td>
-            <td>dpk1</td>
-        </tr>
-        <tr style="height: 50px">
-            <td>5</td>
-            <td colspan="2">10.30 - 11.10</td>
-            <td>DPK 2</td>
-            <td colspan="2" class="gray">07.30 - 08.10</td>
-            <td>B. SUNDA</td>
-            <td>AGAMA</td>
-            <td>IPAS KIMIA</td>
-            <td colspan="2">10.30 - 20.00</td>
-            <td>DPK 1</td>
-        </tr>
-        <tr style="height: 50px">
-            <td>6</td>
-            <td colspan="2">11.10 - 11.50</td>
-            <td>Chinetia</td>
-            <td class="gray">07.30 - 08.10</td>
-            <td>Fatiya</td>
-            <td>Mutia</td>
-            <td>Reni</td>
-            <td>Ikko</td>
-        </tr>
-        <tr class="highlight">
-            <td></td>
-            <td colspan="2">11.50 - 12.30</td>
-            <td colspan="7">Istirahat - Salat Dhuhur - Makan Siang</td>
-            <td>11.15 - 12.45</td>
-        </tr>
-        <tr style="height: 50px">
-            <td>7</td>
-            <td colspan="2">12.30 - 13.10</td>
-            <td>MTK</td>
-            <td class="gray">07.30 - 08.10</td>
-            <td>B.Ind</td>
-            <td>AGAMA</td>
-            <td>Sej.Ind</td>
-            <td>DPK 1</td>
-        </tr>
-        <tr style="height: 50px">
-            <td>8</td>
-            <td colspan="2">13.10 - 13.50</td>
-            <td>Sentot</td>
-            <td class="gray">07.30 - 08.10</td>
-            <td>Resma</td>
-            <td>IPAS Fisika</td>
-            <td>Salsa</td>
-            <td>Ikko</td>
-        </tr>
-        <tr style="height: 50px">
-            <td>9</td>
-            <td colspan="2">13.50 - 14.30</td>
-            <td>MTK</td>
-            <td class="gray">07.30 - 08.10</td>
-            <td>B.Ind</td>
-            <td>IPAS Fisika</td>
-            <td>PKN</td>
-            <td>Ikko</td>
-        </tr>
-        
-        <tr style="height: 50px">
-            <td>10</td>
-            <td>14.30 - 15.10</td>
-            <td>Sentot</td>
-            <td class="gray">07.30 - 08.10</td>
-            <td>Resma</td>
-            <td>Agus Dd</td>
-            <td>Elis</td>
-            <td>Ikko</td>
-        </tr>
-        
-        <tr class="highlight">
-          <td></td>
-            <td colspan="2">15.10 - 15.20</td>
-            <td colspan="8">Kebersihan dan Kerapihan Kelas</td>
-            <td rowspan="2" colspan="1" style="font-size: 10PX;">Kebersihan dan M</td>
-        </tr>
-    </table>
-</body>
+            <td class="highlight">06.45 - 07.30 </td>
+            <td class="gray">Upacara Bendera</td>
+            <td class="gray">06.45 - 07.30</td>
+            <td colspan="3" class="highlight">Apel dan Angkasa Pagi</td>
+            <td class="gray">06.45 - 07.30</td>
+            <td style="font-size: 10px;" class="dark-gray">Angkasa Cinta Lingkungan / Jum'at Sehat</td>
+         </tr>
+         </table>
+      </div>
+   </body>
 </html>
