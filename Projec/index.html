@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <style>
+        body {
+         font-size: 15px;
+         font-family: Arial, sans-serif;
+         overflow: hidden;
+        }
+
+         .table-container {
+            width: 100%;
+            max-width: 1400px; /* Set a fixed maximum width for the table container */
+         }
+
+        table {
+            width: auto;
+            table-layout: auto;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            table-layout: fixed; /* Fixed layout to prevent expansion */
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 2px;
+            font-size: 15px; /* Set base font size */
+            word-wrap: break-word; /* Allows content to wrap */
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #00B0F0;
+            color: white;
+            height: 50px;
+        }
+        .gray {
+            background-color: #D9D9D9;
+        }
+        .dark-gray {
+            background-color: #BFBFBF;
+        }
+        @media (max-width: 768px) {
+            th, td {
+               padding: 4px;
+               font-size: 12px; /* Smaller font size on mobile */
+            }
+         }
+     </style>
+   </head>
+   <!-- Body -->
+   <body>
+      <div class="table-container">          
+         <table class="table">
+            <tr>
+               <th style="width: 40px;" rowspan="2">JAM KE</th>
+               <th style="width: 100px;" rowspan="2">WAKTU</th>
+               <th colspan="7">HARI</th>
+           </tr>
+           <tr>
+               <th style="width: 80px;">SENIN</th>
+               <TH style="width: 120px;">WAKTU</TH>
+               <th style="width: 90px;">SELASA</th>
+               <th style="width: 90px;">RABU</th>
+               <th style="width: 90px;">KAMIS</th>
+               <TH style="width: 120px;">WAKTU</TH>
+               <th style="width: 120px;">Jum'at</th>
+           </tr>
+
+           <tr>
+            <td></td>
+            <td class="highlight">06.45 - 07.30 </td>
+            <td class="gray">Upacara Bendera</td>
+            <td class="gray">06.45 - 07.30</td>
+            <td colspan="3" class="highlight">Apel dan Angkasa Pagi</td>
+            <td class="gray">06.45 - 07.30</td>
+            <td style="font-size: 10px;" class="dark-gray">Angkasa Cinta Lingkungan / Jum'at Sehat</td>
+         </tr>
+         </table>
+      </div>
+   </body>
+</html>
